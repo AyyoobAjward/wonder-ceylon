@@ -24,10 +24,17 @@
 
   --brand: 184 94% 33%;
   --brand-dark: 184 94% 23%;
+}
 
-  @keyframes bounce-subtle {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+@keyframes bounce-subtle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
   }
 }
 
@@ -35,9 +42,11 @@
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-300;
   }
+
   .dark body {
     @apply bg-dark-900 text-slate-100;
   }
@@ -51,7 +60,7 @@
   .glass-panel {
     @apply bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-lg;
   }
-  
+
   .glass-panel-dark {
     @apply bg-dark-900/80 dark:bg-black/80 backdrop-blur-md border border-white/10 dark:border-white/5 shadow-lg;
   }
@@ -60,4 +69,3 @@
 @utility animate-bounce-subtle {
   animation: bounce-subtle 3s ease-in-out infinite;
 }
-
